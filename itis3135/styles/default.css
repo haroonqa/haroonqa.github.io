@@ -38,3 +38,24 @@ li {
 }
 
 
+.centered-table {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.centered-table th, .centered-table td {
+    text-align: center;
+}
+
+button, input[type="submit"], input[type="reset"] {
+    background-color: darkblue;
+    color: white;
+    /* Other styling properties */
+}
+
+input, select, fieldset {
+    /* Styling properties like color, font, size, etc. */
+    border: 1px solid gray;
+    padding: 5px;
+    margin: 5px;
+}

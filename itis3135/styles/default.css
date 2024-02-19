@@ -59,3 +59,28 @@ input, select, fieldset {
     padding: 5px;
     margin: 5px;
 }
+
+main {
+    width: 95%;
+    margin: 0 auto;
+    max-width: 1200px;
+}
+
+@media screen and ( min-width: 981px ) and ( max-width: 1400px ) {
+    body {
+        font-size: 100%;
+    }
+}
+
+@media screen and ( min-width: 601px ) and ( max-width: 980px )  {
+    body {
+        font-size: 110%;
+    }
+}
+
+@media screen and ( min-width: 601px ) and ( max-width: 980px )  {
+    body {
+        font-size: 120%;
+    }
+}
+

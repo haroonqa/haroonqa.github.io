@@ -16,7 +16,7 @@ function displayDateTime() {
 function greetUser() {
     const userName = document.getElementById('name').value;
     const userMood = document.getElementById('mood').value;
-    const greeting = `The Your Company Name welcomes you, ${userName}! We're glad you are doing ${userMood}!`;
+    const greeting = `Haroon and Co welcomes you, ${userName}! We're glad you are doing ${userMood}!`;
     document.getElementById('greeting').textContent = greeting;
     showFavoritePolygon();
 }

@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Haroon Qadri's Happy Quoka || ITIS3135 || Home</title>
+    <title>Haroon Qadri's Happy Quoka || ITIS3135 || Guitar</title>
     <link rel="stylesheet" href="styles/default.css">
     <style>
         /* Additional CSS styles specific to this page */
@@ -184,7 +184,6 @@ table {
     <section id="where">
         <h2>Where</h2>
         <p>I like to play the guitar in my room or somehwhere I can practice and play without anyone else in the room. I also like playing the guitar wherever I see one, so if I see a friend has it at his house I would play it.</p>
-        
        
         <div class="image-container">
             <figure>
@@ -242,6 +241,12 @@ table {
     </tr>
 </table>
 
+    <figure>
+        <img src = "images/classroom.png" alt = "guitar classroom" width = "300">
+        <figcaption>An AI generated image of guitar class<i><p>I used Microsoft Copilot to make me an image of a guitar classroom in middleschool</p></i></figcaption>
+    </figure>
+
+
     </section>
         <section id="ai-prompts">
             <h2>AI Prompts</h2>
@@ -256,6 +261,9 @@ table {
             <p>Can you make the style nicer?</p>
             <h3>Prompt 4</h3>
             <p>How do I make it so when I click on AI prompts it leads me to the AI prompts page?</p>
+            <h3>Prompt 5</h3>
+            <p></p>
+
             
         </section>
     </main>
@@ -297,21 +305,7 @@ table {
 
     navigateToSection('what');
     </script>
-    <script>
-        // Fetch YouTube video thumbnail using YouTube Data API
-        function fetchYouTubeThumbnail(BBz-Jyr23M4&ab_channel=AndyGuitar) {
-            fetch(`https://www.googleapis.com/youtube/v3/videos?id=${BBz-Jyr23M4&ab_channel=AndyGuitar}&key=YOUR_API_KEY&part=snippet`)
-                .then(response => response.json())
-                .then(data => {
-                    const thumbnailUrl = data.items[0].snippet.thumbnails.high.url; // Get the high-quality thumbnail URL
-                    document.getElementById('thumbnail').src = thumbnailUrl; // Set the src attribute of the img tag
-                })
-                .catch(error => console.error('Error fetching YouTube video data:', error));
-        }
-
-        // Call the function with your video ID
-        fetchYouTubeThumbnail('YOUR_VIDEO_ID');
-    </script>
+    
     <script src = "scripts/HTMLInclude.min.js"></script>
 </body>    
 </html>

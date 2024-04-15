@@ -1,0 +1,157 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap');
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: #e1f1fd;
+    color: #004c4c;
+    margin: 0;
+    padding: 0;
+}
+
+
+h1, h2, h3 {
+    font-weight: 700; /* Bold headers */
+}
+
+nav a:hover, .product:hover {
+    background-color: #005c5c; /* Darker shade for interaction */
+    color: white;
+}
+
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    margin-right: 20px;
+}
+
+
+.slideshow img {
+    width: 100%;
+    height: auto;
+    transition: opacity 0.5s ease-in-out;
+}
+
+
+
+header, footer {
+    text-align: center;
+    padding: 1em;
+    background-color: #004c4c;
+    color: white;
+}
+
+
+nav li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+}
+
+.slideshow {
+    width: 100%;
+    height: 300px;
+    background-color: #ccc;
+    text-align: center;
+    line-height: 300px;
+}
+
+.slideshow {
+    width: 100%;
+    height: 300px;
+    background-color: #ccc;
+    text-align: center;
+    line-height: 300px;
+}
+
+.slideshow img {
+    max-height: 100%;
+    max-width: 100%;
+    vertical-align: middle;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.section, .category-intro, .products {
+    margin: 1em;
+    padding: 1em;
+    background: white;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.category-intro {
+    text-align: center;
+    background-color: #004c4c;
+    color: white;
+}
+
+.products {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.product {
+    display: inline-block;           /* Enables Flexbox */
+    justify-content: center; /* Centers horizontally */
+    align-items: center;     /* Centers vertically */
+    flex-direction: row;     /* Aligns children horizontally */
+    width: calc(33.3% - 20px); /* Three items per row with margin/padding */
+    height: 300px;           /* Fixed height for all product divs */
+    margin: 10px;
+    padding: 10px;
+    border: 1px solid #004c4c;
+    text-align: center;
+    background-color: white;
+    overflow: hidden;
+    position: relative;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+.product img {
+    max-width: 100%;  /* Limits width to container size */
+    height: auto;     /* Maintains aspect ratio */
+    margin: 0 10px;   /* Adds horizontal spacing between items */
+}
+
+
+
+.section { /* Assuming `.section` is the parent container */
+    display: flex;
+    flex-wrap: wrap; /* Allows multiple lines of items */
+    justify-content: center; /* Centers items horizontally */
+    align-items: center; /* Aligns items vertically to the middle */
+}
+
+.product img {
+    max-width: 80%;        /* Makes image smaller to fit text below */
+    margin-bottom: 10px;    /* Adds space between the image and text */
+}
+
+.product p {
+    flex-grow: 0;          /* Prevents text from trying to expand */
+    white-space: normal;   /* Allows text to wrap */
+    text-overflow: clip;   /* Clips text normally */
+}
+
+
+    @media (max-width: 768px) {
+        .product {
+            width: 100%; /* Full width for smaller screens */
+            align-items: center;    /* Centers items vertically within the container */
+
+            height: auto; /* Allows variable height based on content */
+            flex-direction: column; /* Stacks items vertically on small screens if needed */
+        }
+        .product img {
+            max-width: 100%;  /* Full width of the container */
+            margin: 10px 0;   /* Adds vertical spacing on smaller screens */
+        }
+}
+

@@ -116,8 +116,12 @@ nav a {
 }
 .product img {
     max-width: 100%;  /* Limits width to container size */
-    height: auto;     /* Maintains aspect ratio */
+    height: 200px;     /* Maintains aspect ratio */
     margin: 0 10px;   /* Adds horizontal spacing between items */
+    margin-bottom: 10px;    /* Adds space between the image and text */
+    object-fit: cover;      /* Covers the area of the box without distorting aspect ratio, may crop the image */
+
+
 }
 
 
@@ -129,16 +133,14 @@ nav a {
     align-items: center; /* Aligns items vertically to the middle */
 }
 
-.product img {
-    max-width: 80%;        /* Makes image smaller to fit text below */
-    margin-bottom: 10px;    /* Adds space between the image and text */
-}
+
 
 .product p {
     flex-grow: 0;          /* Prevents text from trying to expand */
     white-space: normal;   /* Allows text to wrap */
     text-overflow: clip;   /* Clips text normally */
 }
+
 
 
     @media (max-width: 768px) {
@@ -155,3 +157,72 @@ nav a {
         }
 }
 
+
+.custom {
+    display: flex;           /* Enables Flexbox, which makes it easier to center content */
+    flex-direction: column;  /* Stacks the child elements (image and paragraph) vertically */
+    align-items: center;     /* Centers the child elements horizontally within the .custom div */
+    justify-content: center; /* Centers the child elements vertically within the .custom div */
+    text-align: center;      /* Centers the text within the paragraph */
+    margin: 20px;            /* Adds some space around the .custom div */
+    padding: 10px;           /* Adds some space inside the .custom div around the content */
+    background: #f0f0f0;     /* Gives a background color for better visibility (optional) */
+    border-radius: 8px;      /* Rounds the corners of the .custom div (optional) */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional shadow for better aesthetics */
+}
+
+.custom img {
+    max-width: 100%;         /* Ensures the image does not overflow the .custom div */
+    height: auto;            /* Maintains the aspect ratio of the image */
+}
+
+.featured-products {
+    display: flex;
+    justify-content: space-around; /* Evenly space the child elements and add space around them */
+    align-items: flex-start; /* Align items to the start of the flex container */
+    flex-wrap: wrap; /* Allows items to wrap to the next line as needed */
+    padding: 20px; /* Optional: Adds some padding inside the container */
+}
+
+.fproduct {
+    flex: 1 0 30%; /* Flex grow, flex shrink and flex-basis set for consistent sizing */
+    max-width: 30%; /* Consistent maximum width */
+    display: flex;
+    flex-direction: column; /* Aligns children (image/text) in a vertical stack */
+    align-items: center; /* Centers the items horizontally */
+    padding: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 10px;
+    overflow: hidden; /* Hides any overflow, keeping the layout clean */
+    height: auto; /* Allows the container to grow based on content */
+}
+
+.fproduct img {
+    width: 100%; /* Makes the image responsive */
+    height: auto; /* Maintains aspect ratio */
+}
+
+.fproduct p {
+    text-align: center; /* Ensures the text is centered under the image */
+    padding: 5px 0; /* Optional: Adds padding above and below the text */
+}
+
+
+.fproduct .instagram-media {
+    width: 100%; /* Ensures the embed fits the container width */
+    min-height: 300px; /* Provides a minimum height to align with other images */
+    display: flex; /* Utilizes flexbox for centering content */
+    justify-content: center; /* Centers content horizontally */
+    align-items: center; /* Centers content vertically */
+}
+
+@media (max-width: 768px) {
+    .fproduct {
+        width: 100%; /* Full width for smaller screens */
+        max-width: 100%; /* Ensures no overflow */
+    }
+
+    .fproduct .instagram-media {
+        min-height: auto; /* Adjusts height for smaller screens */
+    }
+}

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Store Locations - Maui Jewelers</title>
+    <link rel = "stylesheet" href = "styles/maui.css">
+
+   
+</head>
+<body>
+     <header>
+        <div data-include="components/mauiHeader.html"></div>
+     </header>
+     <style>
+        #map {
+            height: 400px; /* or 100vh for full height */
+            width: 100%; /* Adjust width as necessary */
+        }
+    </style>
+    <h1>Our Store Locations</h1>
+    <div id="map"></div>
+    <footer>
+        <div data-include="components/mauiFooter.html"></div>
+    </footer>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCsra3yG029EbwDZIiBdGl_tPqEvHG1Wwc&callback=initMap" async defer></script>
+    <script src="scripts/mauilocations.js"></script>
+    <script src = "scripts/HTMLInclude.min.js"></script>
+</body>
+</html>

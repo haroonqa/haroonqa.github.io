@@ -5,15 +5,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Maui Jewelers</title>
     <link rel = "stylesheet" href = "styles/maui.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+
 </head>
 <body>
     <header>
         <div data-include="components/mauiHeader.html"></div>
      </header>
    
-    <div class="slideshow">
-        <img src="images/PXL_20220923_202149097.jpg" alt="Slideshow Image 1">
+     <div class="slideshow">
+        <div class="carousel__slides">
+            <img src="images/PXL_20220923_202149097.jpg" class="carousel__slide" alt="Slideshow Image 1">
+            <img src="images/slideshowp2.webp" class="carousel__slide" alt="Slideshow Image 2">
+            <img src="images/Private Engagement Ring Consultation.png" class="carousel__slide" alt="Slideshow Image 3">
+        </div>
+        <button class="carousel__btn carousel__btn--prev"><i class="fas fa-chevron-left"></i></button>
+        <button class="carousel__btn carousel__btn--next"><i class="fas fa-chevron-right"></i></button>
+
     </div>
+    
     <section class="featured-products">
         <h2>Featured Products</h2>
         <div class="fproduct">
@@ -49,6 +59,8 @@
     </footer>
     <script async src="//www.instagram.com/embed.js"></script>
     <script async defer src="//www.instagram.com/embed.js"></script>
+    <script src="scripts/carousel.js"></script>
+
 
     <script src = "scripts/HTMLInclude.min.js"></script>
 </body>

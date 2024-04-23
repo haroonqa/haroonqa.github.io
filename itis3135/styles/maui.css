@@ -28,12 +28,13 @@ nav ul {
     margin-right: 20px;
 }
 
-
+/*
 .slideshow img {
     width: 100%;
     height: auto;
     transition: opacity 0.5s ease-in-out;
 }
+*/
 
 
 
@@ -56,27 +57,15 @@ nav a {
 }
 
 .slideshow {
+    position: relative;
     width: 100%;
-    height: 300px;
+    height: 300px; /* Fixed height */
+    overflow: hidden;
     background-color: #ccc;
     text-align: center;
     line-height: 300px;
 }
 
-.slideshow {
-    width: 100%;
-    height: 300px;
-    background-color: #ccc;
-    text-align: center;
-    line-height: 300px;
-}
-
-.slideshow img {
-    max-height: 100%;
-    max-width: 100%;
-    vertical-align: middle;
-    transition: opacity 0.5s ease-in-out;
-}
 
 .section, .category-intro, .products {
     margin: 1em;
@@ -225,4 +214,48 @@ nav a {
     .fproduct .instagram-media {
         min-height: auto; /* Adjusts height for smaller screens */
     }
+}
+
+
+
+
+.carousel__slides {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+.carousel__slide {
+    min-width: 100%;
+    height: 300px;
+    object-fit: cover; /* Covers the area of the box without distorting aspect ratio, may crop the image */
+    display: block;
+}
+
+/* Navigation Buttons */
+.carousel__btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    border: none;
+    background-color: rgba(0, 0, 0, 0.5); /* semi-transparent black */
+    color: white;
+    padding: 10px 15px;
+    font-size: 18px;
+    cursor: pointer;
+    border-radius: 50%;
+    outline: none;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.carousel__btn:hover, .carousel__btn:focus {
+    background-color: rgba(0, 0, 0, 0.8);
+    transform: scale(1.1);
+}
+
+.carousel__btn--prev {
+    left: 10px;
+}
+
+.carousel__btn--next {
+    right: 10px;
 }

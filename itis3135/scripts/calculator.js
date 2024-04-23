@@ -1,32 +1,47 @@
 window.onload = function () {
-    document.getElementById("btnClear").onclick = clearDisplay;
-    document.getElementById("btnDivide").onclick = function () { appendToDisplay('/'); };
-    document.getElementById("btnMultiply").onclick = function () { appendToDisplay('*'); };
-    document.getElementById("btnMinus").onclick = function () { appendToDisplay('-'); };
-    document.getElementById("btnPlus").onclick = function () { appendToDisplay('+'); };
-    document.getElementById("btnEqual").onclick = calculate;
-
-    // Attach event listeners to number buttons
-    var numberButtons = document.querySelectorAll('.btn:not(#btnClear):not(#btnDivide):not(#btnMultiply):not(#btnMinus):not(#btnPlus):not(#btnEqual)');
-    numberButtons.forEach(function (button) {
-        button.onclick = function () { appendToDisplay(this.innerText); };
+    // Assign event handlers to number buttons
+    const numberButtons = document.querySelectorAll('.btn');
+    numberButtons.forEach(button => {
+        if (!isNaN(button.textContent)) { // Check if button text is a number
+            button.addEventListener('click', function() {
+                document.getElementById('display').value += this.textContent;
+            });
+        }
     });
-};
 
-function appendToDisplay(value) {
-    document.getElementById('display').value += value;
+    // Operator buttons
+    document.getElementById('btnPlus').addEventListener('click', function() { operate('+'); });
+    document.getElementById('btnMinus').addEventListener('click', function() { operate('-'); });
+    document.getElementById('btnMultiply').addEventListener('click', function() { operate('*'); });
+    document.getElementById('btnDivide').addEventListener('click', function() { operate('/'); });
+
+    // Equal button
+    document.getElementById('btnEqual').addEventListener('click', calculate);
+
+    // Clear button
+    document.getElementById('btnClear').addEventListener('click', function() {
+        document.getElementById('display').value = '';
+    });
+
+    // Decimal point button
+    document.getElementById('btnDot').addEventListener('click', function() {
+        if (!document.getElementById('display').value.includes('.')) {
+            document.getElementById('display').value += '.';
+        }
+    });
 }
 
-function clearDisplay() {
-    document.getElementById('display').value = '';
-}
-
-function calculate() {
-    var expression = document.getElementById('display').value;
-    try {
-        var result = eval(expression);
-        document.getElementById('display').value = result;
-    } catch (error) {
-        document.getElementById('display').value = 'Error';
+// Function to handle operator buttons
+function operate(operator) {
+    const display = document.getElementById('display');
+    if (display.value !== '' && !display.value.endsWith(' ')) {
+        display.value += ` ${operator} `;
     }
+}
+
+// Function to calculate the result
+function calculate() {
+    const display = document.getElementById('display');
+    const answer = eval(display.value);
+    display.value = answer;
 }

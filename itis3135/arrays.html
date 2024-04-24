@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Haroon Qadri's Happy Quoka || ITIS3135 || Arrays</title>
+    <link rel = "stylesheet" href = "styles/default.css">
+</head>
+<body>
+    <header>
+        <div data-include="components/header.html"></div>
+    </header>
+    <main>
+        <h2>Arrays</h2>
+        <input type="text" id="nameInput" placeholder="Enter name">
+        <input type="text" id="salaryInput" placeholder="Enter salary">
+        <button onclick="addSalary()">Add Salary</button>
+        <select id="employeeSelect"></select>
+        <input type="text" id="newSalaryInput" placeholder="New salary">
+        <button onclick="modifySalary()">Modify Salary</button>
+        <button onclick="displayResults()">Display Results</button>
+        <button onclick="displaySalary()">Display Salary</button>
+        <div id="results"></div>
+        <table id="results_table">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Salary</th>
+                </tr>
+            </thead>
+            <tbody>
+            </tbody>
+        </table>
+    
+
+
+    </main>
+      
+
+    <footer>
+        <div data-include="components/footer.html"></div>
+    </footer>       
+    <script>
+        document.getElementById("validation_link_html").setAttribute("href","https://validator.w3.org/check?uri=" + location.href);
+            document.getElementById("validation_link_css").setAttribute("href","https://jigsaw.w3.org/css-validator/validator?uri=" + location.href);
+    </script>
+    <script src = "scripts/HTMLInclude.min.js"></script>
+    <script src = "scripts/array.js"></script>
+</body>    
+</html>

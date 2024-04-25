@@ -9,7 +9,8 @@
 </head>
 <body>
     <header>
-        <div data-include="components/header.html"></div>
+        <nav id="nav_main"></nav>
+        <nav id="nav_secondmain"></nav>   
     </header>
     <main>
         <h2>Peer Review 1</h2>
@@ -39,13 +40,13 @@
         <h3>Footer</h3>
         <p><strong>Footer does not have html or css validation: ✗</strong> ✔</p>
    
-    <footer>
-        <div data-include="components/footer.html"></div>
-    </footer>       
-    <script>
-        document.getElementById("validation_link_html").setAttribute("href","https://validator.w3.org/check?uri=" + location.href);
-            document.getElementById("validation_link_css").setAttribute("href","https://jigsaw.w3.org/css-validator/validator?uri=" + location.href);
-    </script>
-    <script src = "scripts/HTMLInclude.min.js"></script>
+    
+        <footer>
+            <div id="footer"></div>
+        </footer>       
+        
+        <script src ="scripts/json.js"></script>
+        <script src = "scripts/HTMLInclude.min.js"></script>
+        <script src ="scripts/validationtools.js"></script>
 </body>    
 </html>

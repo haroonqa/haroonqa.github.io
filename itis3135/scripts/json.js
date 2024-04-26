@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", function() {
-    fetch('../nav_main.json')
+    fetch('nav_main.json')
         .then(response => response.json())
         .then(data => {
             const navMain = document.getElementById("nav_main");
@@ -25,7 +25,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
 document.addEventListener("DOMContentLoaded", function() {
-    fetch('../nav_secondmain.json')
+    fetch('nav_secondmain.json')
         .then(response => response.json())
         .then(data => {
             const navMain = document.getElementById("nav_secondmain");
@@ -42,7 +42,7 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 
 document.addEventListener("DOMContentLoaded", function() {
-    fetch('../footer.json')
+    fetch('footer.json')
       .then(response => response.json())
       .then(data => {
         const footer = document.getElementById("footer");

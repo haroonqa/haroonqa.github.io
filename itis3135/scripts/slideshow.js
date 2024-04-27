@@ -1,7 +1,7 @@
 $(document).ready(function() {
     const images = [
         { src: 'images/helicopter.jpeg', caption: 'H - Helicopter'},
-        { src: 'images/audir8.png', caption: 'A - Audi R8' },
+        { src: 'images/audiR8.png', caption: 'A - Audi R8' },
         { src: 'images/racecar.png', caption: 'R - Race Car' },
         { src: 'images/orangutan.png', caption: 'O - Orangutan' },
         { src: 'images/orange.png', caption: 'O - Orange' },
@@ -24,6 +24,14 @@ $(document).ready(function() {
         currentIndex = (currentIndex + 1) % images.length;
         displayImage(currentIndex);
     }
+    function prevImage() {
+        currentIndex = (currentIndex - 1 + images.length) % images.length;
+        displayImage(currentIndex);
+    }
+
+    $('#nextButton').click(nextImage);
+    $('#prevButton').click(prevImage);
+
 
     images.forEach((img, index) => {
         $('#image-list').append(`<li onclick="displayImage(${index})">${img.caption}</li>`);

@@ -18,7 +18,9 @@
         {"name": "Peer Review 1", "url": "review1.html"},
         {"name": "Peer Review 2", "url": "review2.html"},
         {"name": "Arrays", "url": "arrays.html"},
-        {"name": "Drawing", "url": "drawing.html"}
+        {"name": "Drawing", "url": "drawing.html"},
+        {"name": "Slideshow", "url": "slideshow.html"}
+
     ]
 }
 

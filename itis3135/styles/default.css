@@ -187,3 +187,42 @@ input, select, fieldset {
 }
 
 
+
+#slideshow-container {
+    position: relative;
+    width: auto; /* Adjust this as per your layout needs */
+}
+
+#slideshow-container img {
+    width: 10%;
+    height: 20%;
+}
+
+#prevButton, #nextButton {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black */
+    color: white;
+    border: none;
+    cursor: pointer;
+    outline: none;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    line-height: 40px; /* Vertically center the arrow */
+    font-size: 30px; /* Arrow size */
+    border-radius: 20px; /* Circular buttons */
+}
+
+#prevButton {
+    left: 10px;
+}
+
+#nextButton {
+    right: 10px;
+}
+
+#prevButton:hover, #nextButton:hover {
+    background-color: rgba(0, 0, 0, 0.8); /* Darker background on hover */
+}

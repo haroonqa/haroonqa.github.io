@@ -9,6 +9,7 @@ body {
 }
 
 
+
 h1, h2, h3 {
     font-weight: 700; /* Bold headers */
 }
@@ -17,44 +18,54 @@ nav a:hover, .product:hover {
     background-color: #005c5c; /* Darker shade for interaction */
     color: white;
 }
+header {
+    background-color: #004c4c;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+}
+
+.header-container {
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Centers the content horizontally */
+    max-width: 960px; /* Adjust this width based on your design */
+    margin: 0 auto; /* Auto margins to center the container in the header */
+}
+
+
 
 
 nav ul {
     list-style: none;
     display: flex;
-    justify-content: center;
     align-items: center;
     padding: 0;
-    margin-right: 20px;
+    margin: 0 20px; /* Adds some spacing on both sides of the nav */
 }
 
-/*
-.slideshow img {
-    width: 100%;
-    height: auto;
-    transition: opacity 0.5s ease-in-out;
+
+nav li {
+    display: inline;
+    margin: 0 20px;
 }
-*/
+
+
+nav a {
+    color: white;
+    text-decoration: none;
+}
 
 
 
-header, footer {
+
+footer {
     text-align: center;
     padding: 1em;
     background-color: #004c4c;
     color: white;
 }
 
-
-nav li {
-    display: inline;
-    margin-right: 20px;
-}
-
-nav a {
-    color: white;
-    text-decoration: none;
-}
 
 .slideshow {
     position: relative;
@@ -161,7 +172,7 @@ nav a {
 }
 
 .custom img {
-    max-width: 100%;         /* Ensures the image does not overflow the .custom div */
+    max-width: 40%;         /* Ensures the image does not overflow the .custom div */
     height: auto;            /* Maintains the aspect ratio of the image */
 }
 
@@ -258,4 +269,65 @@ nav a {
 
 .carousel__btn--next {
     right: 10px;
+}
+
+form {
+    margin: 20px;
+    padding: 20px;
+    background-color: #f0f0f0;
+    border-radius: 8px;
+}
+
+form h3 {
+    color: #004c4c;
+}
+
+form label {
+    display: block;
+    margin-top: 10px;
+}
+
+form input[type="text"],
+form input[type="email"],
+form input[type="tel"],
+form textarea {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+}
+
+form input[type="submit"] {
+    display: block;
+    background-color: #005c5c;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+form input[type="submit"]:hover {
+    background-color: #004c4c;
+}
+
+/* Styles for the footer */
+.footer {
+    background-color: #f8f9fa; /* Light grey background */
+    text-align: center; /* Center align text */
+    padding: 20px; /* Padding around the content */
+    font-size: 16px; /* Set font size */
+    color: #333; /* Dark grey text color */
+}
+
+/* Styles for the link within the footer */
+.footer-link {
+    color: #010504; /* Blue link color */
+    text-decoration: none; /* Remove underline */
+}
+
+.footer-link:hover {
+    text-decoration: underline; /* Add underline on hover */
 }

@@ -9,20 +9,50 @@
 <body>
     <header>
         <div data-include="components/mauiHeader.html"></div>
-     </header>
-    <<div class="category-intro">
+    </header>
+    
+    <div class="category-intro">
         <h2>Custom Jewelry Design</h2>
         <p>Create your own unique jewelry. Share your ideas with us, and let us craft your dream piece.</p>
-
     </div>
-        <div class="custom">
-            <img src="images/custompendant.jpg" alt="Men's Rings">
-            <p>Pendant</p>
-        </div>
+    
+    <div class="custom">
+        <img src="images/custompendant.jpg" alt="Custom Pendant">
+        <p>Pendant</p>
+    </div>
 
-       <footer>
+    <form id="customDesignForm" action="/submit-design" method="post">
+        <h3>Request a Custom Design</h3>
+        <label for="name">Your Name:</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="email">Email Address:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="phone">Phone Number:</label>
+        <input type="tel" id="phone" name="phone">
+
+        <label for="description">Describe your design idea:</label>
+        <textarea id="description" name="description" rows="5" required></textarea>
+
+        <input type="submit" value="Submit Request">
+    </form>
+    
+    <div id="thankYouMessage" style="display:none;">
+        <p>Thank you for your submission! We will contact you soon to discuss your custom jewelry design.</p>
+    </div>
+    
+    <footer>
         <div data-include="components/mauiFooter.html"></div>
     </footer>
-    <script src = "scripts/HTMLInclude.min.js"></script>
+    
+    <script src="scripts/HTMLInclude.min.js"></script>
+    <script>
+        document.getElementById('customDesignForm').onsubmit = function(e) {
+            e.preventDefault(); // Prevents the actual form submission
+            console.log('Form Submitted', new FormData(this));
+            document.getElementById('thankYouMessage').style.display = 'block'; // Show thank you message
+        };
+    </script>
 </body>
 </html>

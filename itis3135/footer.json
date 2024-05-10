@@ -7,8 +7,9 @@
       {"text": "codecademy", "url": "https://www.codecademy.com/profiles/haroonQadri0125636464"},
       {"text": "LinkedIn", "url": "https://www.linkedin.com/in/haroon-qadri-986576230/"}
     ],
-    "text": "Page Built by Haroon and Co.",
+    "text": "Page Built by Haroon and Co., Certified in RWD.",
     "companyUrl": "haroonandco.com/index.html",
+    "certificationLink": "https://www.freecodecamp.org/certification/HaroonQ/responsive-web-design",
     "validationLinks": [
       {
         "url": "https://validator.w3.org/check?uri=referer",

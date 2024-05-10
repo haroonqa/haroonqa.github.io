@@ -7,9 +7,10 @@
       {"text": "codecademy", "url": "https://www.codecademy.com/profiles/haroonQadri0125636464"},
       {"text": "LinkedIn", "url": "https://www.linkedin.com/in/haroon-qadri-986576230/"}
     ],
-    "text": "Page Built by Haroon and Co., Certified in RWD.",
+    "text": "Page Built by Haroon and Co, Certified in RWD, and Certified in JS",
     "companyUrl": "haroonandco.com/index.html",
     "certificationLink": "https://www.freecodecamp.org/certification/HaroonQ/responsive-web-design",
+    "javascript": "https://www.freecodecamp.org/certification/HaroonQ/javascript-algorithms-and-data-structures-v8",
     "validationLinks": [
       {
         "url": "https://validator.w3.org/check?uri=referer",

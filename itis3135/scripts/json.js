@@ -63,16 +63,22 @@ document.addEventListener("DOMContentLoaded", function() {
       const paragraph = document.createElement("p");
       const companyLink = document.createElement("a");
       companyLink.href = "http://" + data.companyUrl;
-      companyLink.textContent = "Haroon and Co.";
+      companyLink.textContent = "Haroon and Co";
 
-      const certificationLink = document.createElement("a");
-      certificationLink.href = data.certificationLink;
-      certificationLink.textContent = "Certified in RWD";
-      
+      const certificationLinkRWD = document.createElement("a");
+      certificationLinkRWD.href = data.certificationLink;
+      certificationLinkRWD.textContent = "Certified in RWD";
+
+      const certificationLinkJS = document.createElement("a");
+      certificationLinkJS.href = data.javascript;
+      certificationLinkJS.textContent = "Certified in JS";
+
       paragraph.textContent = "Page Built by ";
       paragraph.appendChild(companyLink);
       paragraph.appendChild(document.createTextNode(", "));
-      paragraph.appendChild(certificationLink);
+      paragraph.appendChild(certificationLinkRWD);
+      paragraph.appendChild(document.createTextNode(", and "));
+      paragraph.appendChild(certificationLinkJS);
       paragraph.appendChild(document.createTextNode(" © 2024"));
 
       footer.appendChild(paragraph);

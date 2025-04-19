@@ -28,3 +28,4 @@ This project is a multi-page website built for a class assignment. It includes v
 - **JavaScript** for interactive elements  
 - **Responsive Design** for mobile-friendly viewing  
 
+https://haroonqa.github.io/itis3135/
